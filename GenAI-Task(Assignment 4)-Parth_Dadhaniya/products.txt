@@ -1,0 +1,3 @@
+Mouse | 100
+Keyboard | 200
+Monitor | 300

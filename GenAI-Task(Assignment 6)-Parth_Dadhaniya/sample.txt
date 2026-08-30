@@ -1,0 +1,4 @@
+Line 1: Welcome to Python Exception Handling.
+Line 2: Reading files safely using try-except.
+Line 3: Handles FileNotFoundError and PermissionError.
+Line 4: This line should not be printed by Task 4.
