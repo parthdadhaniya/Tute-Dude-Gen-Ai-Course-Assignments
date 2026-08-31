@@ -18,7 +18,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 4)-Parth_Dadhaniya/   # File Handling & Data Processing
 ├── GenAI-Task(Assignment 5)-Parth_Dadhaniya/   # Modules, Packages & Import Mechanisms
 ├── GenAI-Task(Assignment 6)-Parth_Dadhaniya/   # Exception Handling & Custom Errors
-└── GenAI-Task(Assignment 7)-Parth_Dadhaniya/   # Object-Oriented Programming (OOP)
+├── GenAI-Task(Assignment 7)-Parth_Dadhaniya/   # Object-Oriented Programming (OOP)
+└── GenAI-Task(Assignment 8)-Parth_Dadhaniya/   # Streamlit (Basic App Building)
 ```
 
 ---
@@ -34,6 +35,7 @@ TuteDude/
 | **Assignment 5** | Modules & Packages | Custom Modules, Package Initialization (`__init__.py`), Utility Packages | [`Assignment 5`](./GenAI-Task(Assignment%205)-Parth_Dadhaniya) |
 | **Assignment 6** | Exception Handling | `try-except-else-finally`, Exception Types, Input Validation, Custom Exceptions | [`Assignment 6`](./GenAI-Task(Assignment%206)-Parth_Dadhaniya) |
 | **Assignment 7** | Object-Oriented Programming | Classes, Encapsulation, Inheritance, Polymorphism, Abstraction, Magic Methods | [`Assignment 7`](./GenAI-Task(Assignment%207)-Parth_Dadhaniya) |
+| **Assignment 8** | Streamlit Apps | Basic UI, Text/Number Inputs, Sidebar, Calculations, Metrics & Bar Chart | [`Assignment 8`](./GenAI-Task(Assignment%208)-Parth_Dadhaniya) |
 
 ---
 
@@ -45,20 +47,26 @@ Navigate into any assignment directory to execute individual task scripts:
 # Example: Run Assignment 7 (OOP Mini Project)
 cd "GenAI-Task(Assignment 7)-Parth_Dadhaniya"
 python3 task7.py
+
+# Example: Run Assignment 8 (Streamlit Basic App)
+cd "GenAI-Task(Assignment 8)-Parth_Dadhaniya"
+streamlit run app_basic.py
 ```
 
-Or execute any task script directly using `python3`:
+Or execute any task script directly using `python3` or `streamlit`:
 
 ```bash
 python3 "GenAI-Task(Assignment 1)-Parth_Dadhaniya/main.py"
 python3 "GenAI-Task(Assignment 6)-Parth_Dadhaniya/task1_safe_division.py"
 python3 "GenAI-Task(Assignment 7)-Parth_Dadhaniya/task7.py"
+streamlit run "GenAI-Task(Assignment 8)-Parth_Dadhaniya/app_basic.py"
 ```
 
 ---
 
 ## 💡 Key Highlights & Code Authenticity
 
-- **Pure Python Standard Library:** Solutions rely on standard Python functionality without external third-party dependencies.
-- **Structured Learning:** Concepts progress systematically from fundamental syntax to robust software design.
+- **Pure Python & Streamlit Libraries:** Clean, beginner-friendly solutions demonstrating core concepts.
+- **Structured Learning:** Concepts progress systematically from fundamental syntax to web interface design.
 - **Detailed Documentation:** Every assignment folder includes a dedicated `README.md` explaining the implementation of each task.
+
