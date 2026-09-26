@@ -25,7 +25,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 11)-Parth_Dadhaniya/  # Matplotlib (Core Plot Types & Visualization)
 ├── GenAI-Task(Assignment 12)-Parth_Dadhaniya/  # Seaborn (Relational, Distribution, Categorical & Multi-Plots)
 ├── GenAI-Task(Assignment 13)-Parth_Dadhaniya/  # Data Gathering, Preprocessing & EDA
-└── GenAI-Task(Assignment 14)-Parth_Dadhaniya/  # Feature Engineering, Encoding, Scaling & Pipelines
+├── GenAI-Task(Assignment 14)-Parth_Dadhaniya/  # Feature Engineering, Encoding, Scaling & Pipelines
+└── GenAI-Task(Assignment 15)-Parth_Dadhaniya/  # Core Algorithms, Metrics & Model Behavior
 ```
 
 ---
@@ -48,6 +49,7 @@ TuteDude/
 | **Assignment 12** | Seaborn Visualizations | Relational, Distribution, Categorical, Matrix, Regression, Faceting | [`Assignment 12`](./GenAI-Task(Assignment%2012)-Parth_Dadhaniya) |
 | **Assignment 13** | Pre-ML Foundations | Data Gathering (CSV/JSON/SQL/API), Preprocessing, Encoding, EDA & Insights | [`Assignment 13`](./GenAI-Task(Assignment%2013)-Parth_Dadhaniya) |
 | **Assignment 14** | Feature Engineering & Pipelines | Feature Engineering, Date Extraction, Encoders, Scalers, Scikit-learn Pipelines | [`Assignment 14`](./GenAI-Task(Assignment%2014)-Parth_Dadhaniya) |
+| **Assignment 15** | Core ML Algorithms & Metrics | Linear/Logistic Regression, Naive Bayes, KNN, Evaluation Metrics, Bias-Variance | [`Assignment 15`](./GenAI-Task(Assignment%2015)-Parth_Dadhaniya) |
 
 ---
 
