@@ -23,7 +23,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 9)-Parth_Dadhaniya/   # NumPy (Mathematical & Statistical Operations)
 ├── GenAI-Task(Assignment 10)-Parth_Dadhaniya/  # Pandas (Series, DataFrame, Functions, Filtering & Analysis)
 ├── GenAI-Task(Assignment 11)-Parth_Dadhaniya/  # Matplotlib (Core Plot Types & Visualization)
-└── GenAI-Task(Assignment 12)-Parth_Dadhaniya/  # Seaborn (Relational, Distribution, Categorical & Multi-Plots)
+├── GenAI-Task(Assignment 12)-Parth_Dadhaniya/  # Seaborn (Relational, Distribution, Categorical & Multi-Plots)
+└── GenAI-Task(Assignment 13)-Parth_Dadhaniya/  # Data Gathering, Preprocessing & EDA
 ```
 
 ---
@@ -44,6 +45,7 @@ TuteDude/
 | **Assignment 10** | Pandas Operations | Series, DataFrames, Filtering, GroupBy, Pandas Built-in Plotting | [`Assignment 10`](./GenAI-Task(Assignment%2010)-Parth_Dadhaniya) |
 | **Assignment 11** | Matplotlib Core Plots | Line, Scatter, Bar, Multiple Bar, Stacked Bar, Histogram, Pie Chart | [`Assignment 11`](./GenAI-Task(Assignment%2011)-Parth_Dadhaniya) |
 | **Assignment 12** | Seaborn Visualizations | Relational, Distribution, Categorical, Matrix, Regression, Faceting | [`Assignment 12`](./GenAI-Task(Assignment%2012)-Parth_Dadhaniya) |
+| **Assignment 13** | Pre-ML Foundations | Data Gathering (CSV/JSON/SQL/API), Preprocessing, Encoding, EDA & Insights | [`Assignment 13`](./GenAI-Task(Assignment%2013)-Parth_Dadhaniya) |
 
 ---
 

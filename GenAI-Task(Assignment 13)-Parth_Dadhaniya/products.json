@@ -1,0 +1,7 @@
+[
+  {"id": 1, "product_name": "Laptop", "category": "Electronics", "price": 55000, "stock": 25},
+  {"id": 2, "product_name": "Headphones", "category": "Accessories", "price": 2500, "stock": 60},
+  {"id": 3, "product_name": "Smartphone", "category": "Electronics", "price": 32000, "stock": 40},
+  {"id": 4, "product_name": "Keyboard", "category": "Accessories", "price": 1800, "stock": 75},
+  {"id": 5, "product_name": "Smartwatch", "category": "Wearables", "price": 4500, "stock": 30}
+]

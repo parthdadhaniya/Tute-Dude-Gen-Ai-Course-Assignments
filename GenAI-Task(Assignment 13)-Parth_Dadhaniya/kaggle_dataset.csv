@@ -1,0 +1,22 @@
+Emp ID,Age,Department,Experience,Salary,Performance Rating,City
+101,28,IT,3,65000,Good,Mumbai
+102,32,HR,5,52000,Excellent,Delhi
+103,45,Finance,12,95000,Excellent,Bangalore
+104,26,Marketing,2,48000,Average,Pune
+105,38,IT,9,82000,Good,Bangalore
+106,29,HR,4,50000,Good,Mumbai
+107,35,Finance,8,78000,Good,Delhi
+108,41,IT,,89000,Excellent,Bangalore
+109,24,Marketing,1,42000,Average,Pune
+110,31,Finance,6,68000,Good,Mumbai
+111,36,,8,72000,Good,Delhi
+112,48,IT,15,110000,Excellent,Bangalore
+113,27,HR,3,49000,Average,Pune
+114,33,Finance,7,75000,Good,Mumbai
+115,30,Marketing,5,58000,Good,Delhi
+116,42,IT,11,92000,Excellent,Bangalore
+117,25,HR,2,46000,Average,Mumbai
+118,39,Finance,10,85000,Good,Pune
+119,34,Marketing,6,61000,Good,Delhi
+120,44,IT,13,99000,Excellent,Bangalore
+104,26,Marketing,2,48000,Average,Pune
