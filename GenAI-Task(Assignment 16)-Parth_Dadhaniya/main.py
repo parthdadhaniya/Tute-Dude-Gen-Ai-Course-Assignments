@@ -1,92 +1,111 @@
-# Assignment 16: SVM, Trees, Ensembles, Validation & Unsupervised Learning
+# Assignment 16: NLP Text Preprocessing Pipeline
 # Author: Parth Dadhaniya
 
+import sys
+import re
 import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.preprocessing import StandardScaler
-from sklearn.svm import SVC
-from sklearn.tree import DecisionTreeClassifier, plot_tree
-from sklearn.ensemble import BaggingClassifier, AdaBoostClassifier, RandomForestClassifier
+from nltk.corpus import stopwords
+from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.stem import PorterStemmer, WordNetLemmatizer
 
-# load Kaggle heart disease dataset
-df = pd.read_csv("heart_disease.csv")
-X = df[["age", "trestbps", "chol", "thalach", "oldpeak"]]
-y = df["target"]
+sys.stdout.reconfigure(encoding="utf-8")
 
-# Task 1: Support Vector Machine (SVM)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# load dataset
+df = pd.read_csv("customer_reviews.csv")
 
-scaler = StandardScaler()
-X_train_scaled = scaler.fit_transform(X_train)
-X_test_scaled = scaler.transform(X_test)
+# Task 1: Load text dataset and inspect
+print("Task 1 - Dataset Loaded:")
+print(f"Total rows: {len(df)} | Columns: {list(df.columns)}")
+print("\nFirst 3 samples:")
+for i, row in df.head(3).iterrows():
+    print(f"Sample {row['id']} [{row['category']}] ({len(row['raw_text'])} chars): {row['raw_text']}")
 
-svm_linear = SVC(kernel="linear", random_state=42).fit(X_train_scaled, y_train)
-svm_rbf = SVC(kernel="rbf", random_state=42).fit(X_train_scaled, y_train)
+# Task 2: Basic cleaning
+def basic_clean(text):
+    text = text.lower()
+    text = re.sub(r"[^\w\s]", "", text)
+    text = re.sub(r"\d+", "", text)
+    return re.sub(r"\s+", " ", text).strip()
 
-print("Task 1 - SVM Kernels:")
-print("Linear Kernel Accuracy:", round(svm_linear.score(X_test_scaled, y_test), 2))
-print("RBF Kernel Accuracy:   ", round(svm_rbf.score(X_test_scaled, y_test), 2))
+df["clean_text_basic"] = df["raw_text"].apply(basic_clean)
+print("\nTask 2 - Basic Cleaning (clean_text_basic Sample 1):")
+print(df["clean_text_basic"].iloc[0])
 
-# Task 2: Decision Tree Algorithm
-dt = DecisionTreeClassifier(max_depth=2, random_state=42).fit(X_train, y_train)
+# Task 3: Advanced noise removal
+def advanced_noise_removal(text):
+    text = re.sub(r"<.*?>", "", text)
+    text = re.sub(r"&\w+;", "", text)
+    text = re.sub(r"https?://\S+|www\.\S+", "", text)
+    text = re.sub(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b", "", text)
+    text = text.encode("ascii", "ignore").decode("ascii")
+    text = re.sub(r"[^\w\s]", "", text)
+    text = re.sub(r"\d+", "", text)
+    return re.sub(r"\s+", " ", text).strip().lower()
 
-plt.figure(figsize=(8, 5))
-plot_tree(dt, feature_names=list(X.columns), class_names=["No Disease", "Disease"], filled=True)
-plt.title("Decision Tree Visualization")
-plt.savefig("decision_tree.png")
-plt.close()
+df["clean_text_advanced"] = df["raw_text"].apply(advanced_noise_removal)
+print("\nTask 3 - Advanced Noise Removal (clean_text_advanced Sample 1):")
+print(df["clean_text_advanced"].iloc[0])
 
-dt_under = DecisionTreeClassifier(max_depth=1, random_state=42).fit(X_train, y_train)
-dt_over = DecisionTreeClassifier(max_depth=None, random_state=42).fit(X_train, y_train)
+# Task 4: Stopword removal
+stop_words = set(stopwords.words("english"))
 
-print("\nTask 2 - Decision Tree:")
-print("Underfitting (depth=1)   - Train:", round(dt_under.score(X_train, y_train), 2), "| Test:", round(dt_under.score(X_test, y_test), 2))
-print("Overfitting  (depth=None) - Train:", round(dt_over.score(X_train, y_train), 2), "| Test:", round(dt_over.score(X_test, y_test), 2))
+def remove_stopwords(text):
+    words = text.split()
+    return " ".join([w for w in words if w not in stop_words])
 
-# Task 3: Train vs Validation vs Test Split
-X_temp, X_test3, y_temp, y_test3 = train_test_split(X, y, test_size=0.2, random_state=42)
-X_tr, X_val, y_tr, y_val = train_test_split(X_temp, y_temp, test_size=0.25, random_state=42)
+df["text_no_stopwords"] = df["clean_text_advanced"].apply(remove_stopwords)
+print("\nTask 4 - Stopword Removal (text_no_stopwords Sample 1):")
+print(df["text_no_stopwords"].iloc[0])
 
-best_depth = 1
-best_val = 0.0
-for d in [1, 2, 3, 4, 5]:
-    m = DecisionTreeClassifier(max_depth=d, random_state=42).fit(X_tr, y_tr)
-    val_acc = m.score(X_val, y_val)
-    if val_acc > best_val:
-        best_val = val_acc
-        best_depth = d
+# Task 6: Word & sentence tokenization
+print("\nTask 6 - Tokenization for 3 Samples:")
+for sample_id in [2, 7, 10]:
+    row = df[df["id"] == sample_id].iloc[0]
+    sentences = sent_tokenize(row["raw_text"])
+    words = word_tokenize(row["raw_text"])
+    print(f"\nSample {sample_id} Sentences ({len(sentences)}): {sentences}")
+    print(f"Sample {sample_id} First 6 Words: {words[:6]}")
 
-final_dt = DecisionTreeClassifier(max_depth=best_depth, random_state=42).fit(X_tr, y_tr)
+# Task 7: Porter stemming
+stemmer = PorterStemmer()
+sample_words = ["running", "studies", "attentive", "carefully", "happily", "leaves"]
+print("\nTask 7 - Porter Stemming:")
+for w in sample_words:
+    print(f"  {w} -> {stemmer.stem(w)}")
 
-print("\nTask 3 - Train / Validation / Test Split:")
-print("Tuned max_depth:          ", best_depth, "(Val Acc:", round(best_val, 2), ")")
-print("Final Model Test Accuracy:", round(final_dt.score(X_test3, y_test3), 2))
+# Task 8: WordNet lemmatization vs stemming
+lemmatizer = WordNetLemmatizer()
+compare_words = [("running", "v"), ("studies", "n"), ("leaves", "n"), ("better", "a")]
+print("\nTask 8 - Stemming vs Lemmatization:")
+for w, pos in compare_words:
+    print(f"  {w:<10} | Stemmed: {stemmer.stem(w):<10} | Lemmatized: {lemmatizer.lemmatize(w, pos=pos)}")
 
-# Task 4: Cross-Validation
-dt_cv = DecisionTreeClassifier(max_depth=3, random_state=42)
-cv_scores = cross_val_score(dt_cv, X, y, cv=5)
+# Task 9: Pipeline
+def nlp_preprocess(text):
+    if not isinstance(text, str):
+        return ""
+    text = re.sub(r"<.*?>", "", text)
+    text = re.sub(r"&\w+;", "", text)
+    text = re.sub(r"https?://\S+|www\.\S+", "", text)
+    text = re.sub(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b", "", text)
+    text = text.encode("ascii", "ignore").decode("ascii")
+    text = re.sub(r"[^\w\s]", "", text)
+    text = re.sub(r"\d+", "", text)
+    tokens = text.lower().strip().split()
+    cleaned = [lemmatizer.lemmatize(t) for t in tokens if t not in stop_words and len(t) > 1]
+    return " ".join(cleaned)
 
-print("\nTask 4 - 5-Fold Cross-Validation:")
-print("Fold Scores:     ", [round(s, 2) for s in cv_scores])
-print("Mean CV Accuracy:", round(cv_scores.mean(), 2))
+df["final_clean_text"] = df["raw_text"].apply(nlp_preprocess)
+print("\nTask 9 - NLP Pipeline Results (First 3 Samples):")
+for i in range(3):
+    print(f"Sample {i+1} Clean: {df['final_clean_text'].iloc[i]}")
 
-# Task 5: Ensemble Learning (Bagging vs Boosting)
-bag = BaggingClassifier(n_estimators=50, random_state=42).fit(X_train, y_train)
-boost = AdaBoostClassifier(n_estimators=50, random_state=42).fit(X_train, y_train)
+# save final dataset
+df.to_csv("cleaned_reviews_final.csv", index=False)
+print("\nSaved final cleaned dataset to cleaned_reviews_final.csv")
 
-print("\nTask 5 - Bagging vs Boosting:")
-print("Bagging Accuracy: ", round(bag.score(X_test, y_test), 2))
-print("AdaBoost Accuracy:", round(boost.score(X_test, y_test), 2))
-
-# Task 6: Random Forest
-rf = RandomForestClassifier(n_estimators=50, random_state=42).fit(X_train, y_train)
-
-print("\nTask 6 - Random Forest Comparison:")
-print("Single Tree:  ", round(dt.score(X_test, y_test), 2))
-print("Bagging:      ", round(bag.score(X_test, y_test), 2))
-print("Random Forest:", round(rf.score(X_test, y_test), 2))
-
-print("\nFeature Importances:")
-for col, imp in zip(X.columns, rf.feature_importances_):
-    print(col, ":", round(imp, 4))
+# Task 10: Technical observations
+print("\nTask 10 - Technical Observations:")
+print("1. Basic cleaning leaves broken URL and HTML pieces; advanced cleaning removes whole noise patterns.")
+print("2. Stemming cuts off suffixes (studies -> studi); lemmatization finds the dictionary root (studies -> study).")
+print("3. Preprocessing cuts down vocabulary size and removes noise, helping NLP models learn better.")

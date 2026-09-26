@@ -1,38 +1,45 @@
-# Assignment 16: SVM, Trees, Ensembles, Validation & Unsupervised Learning
+# Assignment 16: NLP Text Preprocessing Pipeline
 
-This assignment covers advanced supervised algorithms, model validation strategies, and ensemble methods using scikit-learn.
+This project implements an end-to-end text preprocessing pipeline in Python using NLTK and Pandas.
 
-## Dataset Details
-- **Dataset Name:** Heart Disease Dataset (UCI / Cleveland)
-- **Kaggle Link:** [Heart Disease UCI on Kaggle](https://www.kaggle.com/datasets/ronitf/heart-disease-uci)
-- **Features Used:** `age`, `trestbps`, `chol`, `thalach`, `oldpeak` (Numerical)
-- **Target Variable:** `target` (Binary: 0 = No Disease, 1 = Disease)
+## Dataset
+- **File:** `customer_reviews.csv`
+- **Source:** Self-curated customer feedback and product reviews dataset (25 samples) containing real-world raw text noise.
+- **Issues included:** URLs, emails, HTML tags, emojis, punctuation, numbers, inconsistent casing, and stopwords.
 
 ## Files Included
 
-- **`heart_disease.csv`**: Supervised classification dataset.
-- **`task1_svm.py`**: Support Vector Machine comparing Linear and RBF kernels.
-- **`task2_decision_tree.py`**: Decision tree visualization and underfitting vs overfitting comparison.
-- **`task3_validation_split.py`**: 60% Train, 20% Validation, 20% Test split with hyperparameter tuning.
-- **`task4_cross_validation.py`**: 5-Fold cross-validation compared against single train-test split.
-- **`task5_bagging_boosting.py`**: Bagging Classifier vs AdaBoost Classifier.
-- **`task6_random_forest.py`**: Random Forest evaluation, model comparison, and feature importances.
-- **`main.py`**: Unified runner executing all tasks in sequence.
-- **`assignment16.ipynb`**: Complete Jupyter Notebook for the assignment.
+- **`customer_reviews.csv`**: Raw text dataset.
+- **`task1_load_inspect.py`**: Loading data, printing 5 samples with lengths, and identifying text issues.
+- **`task2_basic_cleaning.py`**: Lowercasing, removing punctuation, numbers, and extra spaces (`clean_text_basic`).
+- **`task3_advanced_noise_removal.py`**: Regex cleaning for URLs, emails, HTML, and emojis (`clean_text_advanced`).
+- **`task4_stopword_removal.py`**: Removing stopwords using NLTK (`text_no_stopwords`).
+- **`task5_tokenization.py`**: Sentence tokenization on 3 samples.
+- **`task6_tokenization.py`**: Word and sentence tokenization on 3 samples.
+- **`task7_stemming.py`**: Word stemming using PorterStemmer.
+- **`task8_lemmatization.py`**: Comparing WordNet lemmatizer vs Porter stemmer.
+- **`task9_pipeline.py`**: Complete `nlp_preprocess(text)` pipeline saved to `cleaned_reviews_final.csv`.
+- **`task10_observations.py`**: Technical observations on cleaning, stemming vs lemmatization, and preprocessing.
+- **`main.py`**: Runs all tasks in order.
+- **`assignment16.ipynb`**: Complete Jupyter Notebook.
 
 ## How to Run
 
-Run all tasks together:
+Run all tasks:
 ```bash
 python main.py
 ```
 
 Or run any task individually:
 ```bash
-python task1_svm.py
-python task2_decision_tree.py
-python task3_validation_split.py
-python task4_cross_validation.py
-python task5_bagging_boosting.py
-python task6_random_forest.py
+python task1_load_inspect.py
+python task2_basic_cleaning.py
+python task3_advanced_noise_removal.py
+python task4_stopword_removal.py
+python task5_tokenization.py
+python task6_tokenization.py
+python task7_stemming.py
+python task8_lemmatization.py
+python task9_pipeline.py
+python task10_observations.py
 ```
