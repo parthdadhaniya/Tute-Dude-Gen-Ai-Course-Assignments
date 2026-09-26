@@ -50,6 +50,8 @@ TuteDude/
 | **Assignment 13** | Pre-ML Foundations | Data Gathering (CSV/JSON/SQL/API), Preprocessing, Encoding, EDA & Insights | [`Assignment 13`](./GenAI-Task(Assignment%2013)-Parth_Dadhaniya) |
 | **Assignment 14** | Feature Engineering & Pipelines | Feature Engineering, Date Extraction, Encoders, Scalers, Scikit-learn Pipelines | [`Assignment 14`](./GenAI-Task(Assignment%2014)-Parth_Dadhaniya) |
 | **Assignment 15** | Core ML Algorithms & Metrics | Linear/Logistic Regression, Naive Bayes, KNN, Evaluation Metrics, Bias-Variance | [`Assignment 15`](./GenAI-Task(Assignment%2015)-Parth_Dadhaniya) |
+| **Assignment 16** | Advanced ML & Ensembles | SVM (Linear/RBF), Decision Trees, Validation Splits, Cross-Validation, Bagging & Boosting, Random Forest | [`Assignment 16`](./GenAI-Task(Assignment%2016)-Parth_Dadhaniya) |
+
 
 ---
 
