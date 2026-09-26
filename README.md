@@ -21,7 +21,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 7)-Parth_Dadhaniya/   # Object-Oriented Programming (OOP)
 ├── GenAI-Task(Assignment 8)-Parth_Dadhaniya/   # Streamlit (Basic App Building)
 ├── GenAI-Task(Assignment 9)-Parth_Dadhaniya/   # NumPy (Mathematical & Statistical Operations)
-└── GenAI-Task(Assignment 10)-Parth_Dadhaniya/  # Pandas (Series, DataFrame, Functions, Filtering & Analysis)
+├── GenAI-Task(Assignment 10)-Parth_Dadhaniya/  # Pandas (Series, DataFrame, Functions, Filtering & Analysis)
+└── GenAI-Task(Assignment 11)-Parth_Dadhaniya/  # Matplotlib (Core Plot Types & Visualization)
 ```
 
 ---
@@ -40,6 +41,7 @@ TuteDude/
 | **Assignment 8** | Streamlit Apps | Basic UI, Text/Number Inputs, Sidebar, Calculations, Metrics & Bar Chart | [`Assignment 8`](./GenAI-Task(Assignment%208)-Parth_Dadhaniya) |
 | **Assignment 9** | NumPy Operations | Array Creation, Mathematical Formulas, Axis Aggregations, Statistical Analysis | [`Assignment 9`](./GenAI-Task(Assignment%209)-Parth_Dadhaniya) |
 | **Assignment 10** | Pandas Operations | Series, DataFrames, Filtering, GroupBy, Pandas Built-in Plotting | [`Assignment 10`](./GenAI-Task(Assignment%2010)-Parth_Dadhaniya) |
+| **Assignment 11** | Matplotlib Core Plots | Line, Scatter, Bar, Multiple Bar, Stacked Bar, Histogram, Pie Chart | [`Assignment 11`](./GenAI-Task(Assignment%2011)-Parth_Dadhaniya) |
 
 ---
 
