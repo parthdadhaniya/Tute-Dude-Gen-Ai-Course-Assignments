@@ -51,6 +51,8 @@ TuteDude/
 | **Assignment 14** | Feature Engineering & Pipelines | Feature Engineering, Date Extraction, Encoders, Scalers, Scikit-learn Pipelines | [`Assignment 14`](./GenAI-Task(Assignment%2014)-Parth_Dadhaniya) |
 | **Assignment 15** | Core ML Algorithms & Metrics | Linear/Logistic Regression, Naive Bayes, KNN, Evaluation Metrics, Bias-Variance | [`Assignment 15`](./GenAI-Task(Assignment%2015)-Parth_Dadhaniya) |
 | **Assignment 16** | NLP Text Preprocessing | Text Cleaning (Basic & Advanced), Tokenization, Stopwords, Stemming, Lemmatization, Pipeline | [`Assignment 16`](./GenAI-Task(Assignment%2016)-Parth_Dadhaniya) |
+| **Assignment 17** | Text Cleaning & Preprocessing | Raw Text Inspection, Basic/Advanced Cleaning, Stopwords, Slang, Tokenization, Stemming, Lemmatization, Pipeline | [`Assignment 17`](./GenAI-Task(Assignment%2017)-Parth_Dadhaniya) |
+
 
 
 ---
