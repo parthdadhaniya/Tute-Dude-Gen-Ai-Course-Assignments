@@ -31,7 +31,10 @@ TuteDude/
 ├── GenAI-Task(Assignment 17)-Parth_Dadhaniya/  # Text Cleaning & Preprocessing
 ├── GenAI-Task(Assignment 18)-Parth_Dadhaniya/  # Text Vectorization (BoW, N-Grams, TF-IDF)
 ├── GenAI-Task(Assignment 19)-Parth_Dadhaniya/  # Word2Vec Text Embeddings (CBOW, Skip-Gram, Visuals)
-└── GenAI-Task(Assignment 20)-Parth_Dadhaniya/  # Recommendation System & Render Deployment
+├── GenAI-Task(Assignment 20)-Parth_Dadhaniya/  # Recommendation System & Render Deployment
+├── GenAI-Task(Assignment 21)-Parth_Dadhaniya/  # LangChain Document Loaders & Splitters
+├── GenAI-Task(Assignment 22)-Parth_Dadhaniya/  # Embeddings, Vector Stores & Similarity Search
+└── GenAI-Task(Assignment 23)-Parth_Dadhaniya/  # OpenAI & Retrieval-Augmented Generation (RAG)
 ```
 
 ---
@@ -62,6 +65,7 @@ TuteDude/
 | **Assignment 20** | Recommendation System & Deployment | Content-Based Recommendation, TF-IDF, Cosine Similarity, Streamlit UI, Render Deployment | [`Assignment 20`](./GenAI-Task(Assignment%2020)-Parth_Dadhaniya) |
 | **Assignment 21** | LangChain Document Loaders & Splitters | Document Loaders (Text, CSV, PDF, Directory, Web), Text Splitters (Character, Recursive, Markdown, Semantic), Unified Pipeline | [`Assignment 21`](./GenAI-Task(Assignment%2021)-Parth_Dadhaniya) |
 | **Assignment 22** | Embeddings, Vector Stores & Similarity Search | OpenAI & Hugging Face Embeddings, Ollama Local Setup, FAISS & ChromaDB, Similarity Search Pipeline | [`Assignment 22`](./GenAI-Task(Assignment%2022)-Parth_Dadhaniya) |
+| **Assignment 23** | OpenAI & RAG Systems | OpenAI Chat, WikipediaRetriever, ChromaDB, MMR, Multi-Query, Compression, YouTube RAG Chatbot | [`Assignment 23`](./GenAI-Task(Assignment%2023)-Parth_Dadhaniya) |
 
 
 
