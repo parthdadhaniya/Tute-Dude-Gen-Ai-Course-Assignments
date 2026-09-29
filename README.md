@@ -30,7 +30,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 16)-Parth_Dadhaniya/  # NLP Text Preprocessing Pipeline
 ├── GenAI-Task(Assignment 17)-Parth_Dadhaniya/  # Text Cleaning & Preprocessing
 ├── GenAI-Task(Assignment 18)-Parth_Dadhaniya/  # Text Vectorization (BoW, N-Grams, TF-IDF)
-└── GenAI-Task(Assignment 19)-Parth_Dadhaniya/  # Word2Vec Text Embeddings (CBOW, Skip-Gram, Visuals)
+├── GenAI-Task(Assignment 19)-Parth_Dadhaniya/  # Word2Vec Text Embeddings (CBOW, Skip-Gram, Visuals)
+└── GenAI-Task(Assignment 20)-Parth_Dadhaniya/  # Recommendation System & Render Deployment
 ```
 
 ---
@@ -58,6 +59,8 @@ TuteDude/
 | **Assignment 17** | Text Cleaning & Preprocessing | Raw Text Inspection, Basic/Advanced Cleaning, Stopwords, Slang, Tokenization, Stemming, Lemmatization, Pipeline | [`Assignment 17`](./GenAI-Task(Assignment%2017)-Parth_Dadhaniya) |
 | **Assignment 18** | Text Vectorization | One-Hot Encoding, Bag of Words (BoW), N-Grams, TF-IDF, Vectorizer Parameters | [`Assignment 18`](./GenAI-Task(Assignment%2018)-Parth_Dadhaniya) |
 | **Assignment 19** | Word2Vec Text Embeddings | Word Embeddings, CBOW, Skip-Gram, Vector Arithmetic, PCA 2D Visualization | [`Assignment 19`](./GenAI-Task(Assignment%2019)-Parth_Dadhaniya) |
+| **Assignment 20** | Recommendation System & Deployment | Content-Based Recommendation, TF-IDF, Cosine Similarity, Streamlit UI, Render Deployment | [`Assignment 20`](./GenAI-Task(Assignment%2020)-Parth_Dadhaniya) |
+
 
 
 
