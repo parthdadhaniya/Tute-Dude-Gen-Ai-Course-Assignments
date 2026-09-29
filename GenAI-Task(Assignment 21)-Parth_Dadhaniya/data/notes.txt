@@ -1,0 +1,13 @@
+GenAI Knowledge Assistant - System Architecture & Overview
+
+Introduction:
+The Personal Knowledge Assistant is designed to help team members quickly query internal company documentation, policies, and project notes. It eliminates the friction of manual search across scattered drives and repositories.
+
+Data Ingestion Layer:
+The ingestion subsystem handles heterogeneous data sources including text notes, tabular spreadsheets, customer reports, and external web documentation. LangChain document loaders standardize these formats into unified Document objects consisting of page_content and metadata.
+
+Text Splitting & Chunking Strategy:
+Large unstructured documents cannot be fed into LLM prompts directly due to context window constraints and retrieval noise. Chunking breaks large documents into smaller, semantically coherent passages. We evaluate length-based splitters, recursive character splitters, and structure-aware splitters to find the optimal chunk size and overlap for accurate semantic retrieval.
+
+Compliance and Security:
+All processed documents must follow strict enterprise data governance. Personally identifiable information (PII) must be masked before entering embedding pipelines. Proprietary source codes and internal financial projections must remain on local premises.

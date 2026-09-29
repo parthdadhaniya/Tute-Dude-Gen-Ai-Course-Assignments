@@ -60,6 +60,7 @@ TuteDude/
 | **Assignment 18** | Text Vectorization | One-Hot Encoding, Bag of Words (BoW), N-Grams, TF-IDF, Vectorizer Parameters | [`Assignment 18`](./GenAI-Task(Assignment%2018)-Parth_Dadhaniya) |
 | **Assignment 19** | Word2Vec Text Embeddings | Word Embeddings, CBOW, Skip-Gram, Vector Arithmetic, PCA 2D Visualization | [`Assignment 19`](./GenAI-Task(Assignment%2019)-Parth_Dadhaniya) |
 | **Assignment 20** | Recommendation System & Deployment | Content-Based Recommendation, TF-IDF, Cosine Similarity, Streamlit UI, Render Deployment | [`Assignment 20`](./GenAI-Task(Assignment%2020)-Parth_Dadhaniya) |
+| **Assignment 21** | LangChain Document Loaders & Splitters | Document Loaders (Text, CSV, PDF, Directory, Web), Text Splitters (Character, Recursive, Markdown, Semantic), Unified Pipeline | [`Assignment 21`](./GenAI-Task(Assignment%2021)-Parth_Dadhaniya) |
 
 
 
