@@ -1,0 +1,46 @@
+id,category,raw_text,clean_text
+1,Movie Review,"The acting was so good and the movie climax was mind blowing in cinema",movie acting good climax mind blowing cinema
+2,Movie Review,"I loved the film cinematography and background score was great",loved film cinematography background score great
+3,Movie Review,"Worst sequel ever made dialogue was boring and plot had plotholes",worst sequel ever made dialogue boring plot plothole
+4,Movie Review,"The visual effects were amazing and director made a wonderful film",visual effect amazing director made wonderful film
+5,Movie Review,"Average thriller film first half exciting second half predictable",average thriller film first half exciting second half predictable
+6,Movie Review,"The actor gave powerful performance and actress played queen role well",actor gave powerful performance actress played queen role well
+7,Movie Review,"Every actor and actress in the cinema delivered strong emotional scenes",actor actress cinema delivered strong emotional scenes
+8,Movie Review,"The director won an award for best cinematography in this cinema",director won award best cinematography cinema
+9,Movie Review,"Watching movies in theater with friends is always exciting and fun",watching movie theater friend always exciting fun
+10,Movie Review,"The storyline of this drama film touched everyone in theater",storyline drama film touched theater
+11,Tech & Gadgets,"This smartphone phone battery is terrible and drained in three hours",smartphone phone battery terrible drained hour
+12,Tech & Gadgets,"Ordered wireless earbuds sound quality and bass is heavy and smooth",ordered wireless earbuds sound quality bass heavy smooth
+13,Tech & Gadgets,"Do not buy this laptop overheating issue within fifteen minutes gaming",buy laptop overheating issue within minute gaming
+14,Tech & Gadgets,"Mechanical keyboard feels clicky and battery lasts forty hours on charge",mechanical keyboard feel clicky battery last hour charge
+15,Tech & Gadgets,"The new electric car launch today has modern design and fast charging",electric car launch today modern design fast charging
+16,Tech & Gadgets,"Smart watch tracks heart rate and sleeping patterns accurately on screen",smart watch tracks heart rate sleeping pattern screen
+17,Tech & Gadgets,"Laptop screen resolution is sharp and battery life is durable",laptop screen resolution sharp battery life durable
+18,Tech & Gadgets,"Smartphone camera captures vivid photos and phone charging is quick",smartphone camera capture vivid photo phone charging quick
+19,Tech & Gadgets,"Computer hardware upgrade improved device speed and performance",computer hardware upgrade improved device speed performance
+20,Tech & Gadgets,"Wireless headphones connect smoothly with phone and laptop devices",wireless headphone connect smoothly phone laptop device
+21,Customer Support,"Customer service was completely useless waited forty minutes on call",customer service useless waited minute call
+22,Customer Support,"Send refund details for my order ticket as soon as possible",refund detail order ticket quick resolve
+23,Customer Support,"App crashes repeatedly whenever I click checkout button to place order",app crash repeatedly click checkout button place order
+24,Customer Support,"Fast delivery package arrived in two days undamaged with premium quality",fast delivery package arrived day undamaged premium quality
+25,Customer Support,"Customer support team resolved password issue and helped reset account",customer support team resolve password issue help reset account
+26,Customer Support,"Delivery partner was polite and delivered package right on time",delivery partner polite delivered package time
+27,Customer Support,"Requested replacement for broken device and got instant refund",requested replacement broken device got instant refund
+28,Customer Support,"Flight ticket booking was cancelled without refund from airline service",flight ticket booking cancel refund airline service
+29,Customer Support,"Hotel room was neat and clean and staff service was polite and helpful",hotel room neat clean staff service polite helpful
+30,Customer Support,"Great customer experience with quick response from help desk support",great customer experience quick response help desk support
+31,Royalty & Society,"The king ruled the royal kingdom with great wisdom and power",king ruled royal kingdom great wisdom power
+32,Royalty & Society,"The queen ruled alongside the king in the royal palace",queen ruled king royal palace
+33,Royalty & Society,"A wise king protects his kingdom and royal subjects",wise king protect kingdom royal subject
+34,Royalty & Society,"The noble queen governed the palace with compassion and grace",noble queen govern palace compassion grace
+35,Royalty & Society,"A prince is a young royal man destined to become king",prince young royal man destined become king
+36,Royalty & Society,"A princess is a royal woman living in the palace",princess royal woman living palace
+37,Royalty & Society,"The strong man worked hard in the royal kingdom",strong man work hard royal kingdom
+38,Royalty & Society,"The brave woman defended the royal family and palace",brave woman defend royal family palace
+39,Royalty & Society,"King and queen walked together inside the royal palace court",king queen walk royal palace court
+40,Royalty & Society,"The prince and princess visited the royal garden outside castle",prince princess visit royal garden outside castle
+41,General NLP,"Learning NLP and text embeddings is interesting for language understanding",learning nlp text embedding interesting language understanding
+42,General NLP,"Word embeddings convert words into dense numerical vectors in semantic space",word embedding convert word dense numerical vector semantic space
+43,General NLP,"Continuous bag of words and skip gram are two Word2Vec training techniques",continuous bag word skip gram word2vec training technique
+44,General NLP,"Semantic meaning and word similarity are captured using vector dot products",semantic meaning word similarity captured vector dot product
+45,General NLP,"Natural language processing models learn contextual representation from text corpus",natural language processing model learn contextual representation text corpus

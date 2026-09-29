@@ -26,7 +26,11 @@ TuteDude/
 ├── GenAI-Task(Assignment 12)-Parth_Dadhaniya/  # Seaborn (Relational, Distribution, Categorical & Multi-Plots)
 ├── GenAI-Task(Assignment 13)-Parth_Dadhaniya/  # Data Gathering, Preprocessing & EDA
 ├── GenAI-Task(Assignment 14)-Parth_Dadhaniya/  # Feature Engineering, Encoding, Scaling & Pipelines
-└── GenAI-Task(Assignment 15)-Parth_Dadhaniya/  # Core Algorithms, Metrics & Model Behavior
+├── GenAI-Task(Assignment 15)-Parth_Dadhaniya/  # Core Algorithms, Metrics & Model Behavior
+├── GenAI-Task(Assignment 16)-Parth_Dadhaniya/  # NLP Text Preprocessing Pipeline
+├── GenAI-Task(Assignment 17)-Parth_Dadhaniya/  # Text Cleaning & Preprocessing
+├── GenAI-Task(Assignment 18)-Parth_Dadhaniya/  # Text Vectorization (BoW, N-Grams, TF-IDF)
+└── GenAI-Task(Assignment 19)-Parth_Dadhaniya/  # Word2Vec Text Embeddings (CBOW, Skip-Gram, Visuals)
 ```
 
 ---
@@ -53,6 +57,7 @@ TuteDude/
 | **Assignment 16** | NLP Text Preprocessing | Text Cleaning (Basic & Advanced), Tokenization, Stopwords, Stemming, Lemmatization, Pipeline | [`Assignment 16`](./GenAI-Task(Assignment%2016)-Parth_Dadhaniya) |
 | **Assignment 17** | Text Cleaning & Preprocessing | Raw Text Inspection, Basic/Advanced Cleaning, Stopwords, Slang, Tokenization, Stemming, Lemmatization, Pipeline | [`Assignment 17`](./GenAI-Task(Assignment%2017)-Parth_Dadhaniya) |
 | **Assignment 18** | Text Vectorization | One-Hot Encoding, Bag of Words (BoW), N-Grams, TF-IDF, Vectorizer Parameters | [`Assignment 18`](./GenAI-Task(Assignment%2018)-Parth_Dadhaniya) |
+| **Assignment 19** | Word2Vec Text Embeddings | Word Embeddings, CBOW, Skip-Gram, Vector Arithmetic, PCA 2D Visualization | [`Assignment 19`](./GenAI-Task(Assignment%2019)-Parth_Dadhaniya) |
 
 
 
