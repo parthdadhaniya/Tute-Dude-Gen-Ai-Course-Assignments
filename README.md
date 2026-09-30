@@ -36,7 +36,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 22)-Parth_Dadhaniya/  # Embeddings, Vector Stores & Similarity Search
 ├── GenAI-Task(Assignment 23)-Parth_Dadhaniya/  # OpenAI & Retrieval-Augmented Generation (RAG)
 ├── GenAI-Task(Assignment 24)-Parth_Dadhaniya/  # Ollama Chatbot & LangSmith Tracking
-└── GenAI-Task(Assignment 25)-Parth_Dadhaniya/  # Prompting & LangChain Chains (LCEL, Pydantic, RAG)
+├── GenAI-Task(Assignment 25)-Parth_Dadhaniya/  # Prompting & LangChain Chains (LCEL, Pydantic, RAG)
+└── GenAI-Task(Assignment 26)-Parth_Dadhaniya/  # Groq API Chatbot, RAG & FastAPI Serving
 ```
 
 ---
@@ -70,6 +71,7 @@ TuteDude/
 | **Assignment 23** | OpenAI & RAG Systems | OpenAI Chat, WikipediaRetriever, ChromaDB, MMR, Multi-Query, Compression, YouTube RAG Chatbot | [`Assignment 23`](./GenAI-Task(Assignment%2023)-Parth_Dadhaniya) |
 | **Assignment 24** | Ollama Chatbot & LangSmith | Local LLMs (Ollama), Multi-Turn Chatbot Memory, Observability & Tracing (LangSmith) | [`Assignment 24`](./GenAI-Task(Assignment%2024)-Parth_Dadhaniya) |
 | **Assignment 25** | Prompting & LangChain Chains | Prompt Templates, Pydantic Structured Output, Conditional/Parallel Chains, LCEL RAG Pipeline | [`Assignment 25`](./GenAI-Task(Assignment%2025)-Parth_Dadhaniya) |
+| **Assignment 26** | Groq API Chatbot, RAG & FastAPI Serving | Groq LPU Inference, Grounded RAG, FastAPI REST Endpoints, Pydantic Validation | [`Assignment 26`](./GenAI-Task(Assignment%2026)-Parth_Dadhaniya) |
 
 
 
