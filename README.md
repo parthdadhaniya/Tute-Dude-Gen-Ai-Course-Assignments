@@ -43,7 +43,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 29)-Parth_Dadhaniya/  # Q&A Chatbot Application (OpenAI & Ollama Switching)
 ├── GenAI-Task(Assignment 30)-Parth_Dadhaniya/  # Chat Groq RAG Application with Streamlit UI
 ├── GenAI-Task(Assignment 31)-Parth_Dadhaniya/  # Conversational PDF Q&A Chatbot with Message History
-└── GenAI-Task(Assignment 32)-Parth_Dadhaniya/  # AI Agents using LangChain (Tools, ReAct Agent)
+├── GenAI-Task(Assignment 32)-Parth_Dadhaniya/  # AI Agents using LangChain (Tools, ReAct Agent)
+└── GenAI-Task(Assignment 33)-Parth_Dadhaniya/  # Chat with SQL Database using LangChain (SQLite, MySQL, SQL Agent)
 ```
 
 ---
@@ -84,6 +85,7 @@ TuteDude/
 | **Assignment 30** | Chat Groq RAG with Streamlit UI | Ultra-Low Latency Inference, ChromaDB RAG, Document Ingestion, Streamlit Interactive Chat | [`Assignment 30`](./GenAI-Task(Assignment%2030)-Parth_Dadhaniya) |
 | **Assignment 31** | Conversational PDF Q&A Chatbot with History | Multi-Page PDF Ingestion, ChromaDB RAG, Message History & Trimming, Streamlit UI | [`Assignment 31`](./GenAI-Task(Assignment%2031)-Parth_Dadhaniya) |
 | **Assignment 32** | AI Agents using LangChain | Custom Tools & Toolkits, Tool Binding, Tool Calling Flow, ReAct Agent Architecture | [`Assignment 32`](./GenAI-Task(Assignment%2032)-Parth_Dadhaniya) |
+| **Assignment 33** | Chat with SQL Database | SQLite DB, SQLAlchemy Engine, MySQL Workbench, SQLDatabaseToolkit, SQL Agent, Safety Guardrails | [`Assignment 33`](./GenAI-Task(Assignment%2033)-Parth_Dadhaniya) |
 
 
 
