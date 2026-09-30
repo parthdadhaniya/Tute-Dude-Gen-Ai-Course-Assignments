@@ -47,7 +47,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 33)-Parth_Dadhaniya/  # Chat with SQL Database using LangChain (SQLite, MySQL, SQL Agent)
 ├── GenAI-Task(Assignment 34)-Parth_Dadhaniya/  # Text Summarization using LangChain (Stuff, Map-Reduce, Refine)
 ├── GenAI-Task(Assignment 35)-Parth_Dadhaniya/  # Text-to-Math Agent (ReAct Solver, Calculator Tool, Session State)
-└── GenAI-Task(Assignment 36)-Parth_Dadhaniya/  # HuggingFace Integration with LangChain (Direct API, LCEL, ChatPromptTemplate)
+├── GenAI-Task(Assignment 36)-Parth_Dadhaniya/  # HuggingFace Integration with LangChain (Direct API, LCEL, ChatPromptTemplate)
+└── GenAI-Task(Assignment 37)-Parth_Dadhaniya/  # AstraDB RAG (Cloud Vector Database, PDF Ingestion, Grounding, Streamlit UI)
 ```
 
 ---
@@ -92,6 +93,7 @@ TuteDude/
 | **Assignment 34** | Text Summarization | PromptTemplate, Stuff Chain, Map-Reduce Chain, Refine Chain, Unified Summarizer | [`Assignment 34`](./GenAI-Task(Assignment%2034)-Parth_Dadhaniya) |
 | **Assignment 35** | Text-to-Math Agent | Word Problem Solver, ReAct Agent, Calculator Tool, Streamlit Session State | [`Assignment 35`](./GenAI-Task(Assignment%2035)-Parth_Dadhaniya) |
 | **Assignment 36** | HuggingFace Integration with LangChain | Open-Source Models, Direct Inference, LangChain Endpoint Wrappers, ChatPromptTemplate vs Normal Prompt | [`Assignment 36`](./GenAI-Task(Assignment%2036)-Parth_Dadhaniya) |
+| **Assignment 37** | AstraDB Cloud Vector Database & RAG | DataStax AstraDB, PDF Chunking & Embeddings, Grounded Q&A, Session State | [`Assignment 37`](./GenAI-Task(Assignment%2037)-Parth_Dadhaniya) |
 
 
 
