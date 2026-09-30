@@ -45,7 +45,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 31)-Parth_Dadhaniya/  # Conversational PDF Q&A Chatbot with Message History
 ├── GenAI-Task(Assignment 32)-Parth_Dadhaniya/  # AI Agents using LangChain (Tools, ReAct Agent)
 ├── GenAI-Task(Assignment 33)-Parth_Dadhaniya/  # Chat with SQL Database using LangChain (SQLite, MySQL, SQL Agent)
-└── GenAI-Task(Assignment 34)-Parth_Dadhaniya/  # Text Summarization using LangChain (Stuff, Map-Reduce, Refine)
+├── GenAI-Task(Assignment 34)-Parth_Dadhaniya/  # Text Summarization using LangChain (Stuff, Map-Reduce, Refine)
+└── GenAI-Task(Assignment 35)-Parth_Dadhaniya/  # Text-to-Math Agent (ReAct Solver, Calculator Tool, Session State)
 ```
 
 ---
@@ -88,6 +89,7 @@ TuteDude/
 | **Assignment 32** | AI Agents using LangChain | Custom Tools & Toolkits, Tool Binding, Tool Calling Flow, ReAct Agent Architecture | [`Assignment 32`](./GenAI-Task(Assignment%2032)-Parth_Dadhaniya) |
 | **Assignment 33** | Chat with SQL Database | SQLite DB, SQLAlchemy Engine, MySQL Workbench, SQLDatabaseToolkit, SQL Agent, Safety Guardrails | [`Assignment 33`](./GenAI-Task(Assignment%2033)-Parth_Dadhaniya) |
 | **Assignment 34** | Text Summarization | PromptTemplate, Stuff Chain, Map-Reduce Chain, Refine Chain, Unified Summarizer | [`Assignment 34`](./GenAI-Task(Assignment%2034)-Parth_Dadhaniya) |
+| **Assignment 35** | Text-to-Math Agent | Word Problem Solver, ReAct Agent, Calculator Tool, Streamlit Session State | [`Assignment 35`](./GenAI-Task(Assignment%2035)-Parth_Dadhaniya) |
 
 
 
