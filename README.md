@@ -42,7 +42,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 28)-Parth_Dadhaniya/  # Q&A RAG Chatbot with Message History (Grounding, Follow-ups)
 ├── GenAI-Task(Assignment 29)-Parth_Dadhaniya/  # Q&A Chatbot Application (OpenAI & Ollama Switching)
 ├── GenAI-Task(Assignment 30)-Parth_Dadhaniya/  # Chat Groq RAG Application with Streamlit UI
-└── GenAI-Task(Assignment 31)-Parth_Dadhaniya/  # Conversational PDF Q&A Chatbot with Message History
+├── GenAI-Task(Assignment 31)-Parth_Dadhaniya/  # Conversational PDF Q&A Chatbot with Message History
+└── GenAI-Task(Assignment 32)-Parth_Dadhaniya/  # AI Agents using LangChain (Tools, ReAct Agent)
 ```
 
 ---
@@ -82,6 +83,7 @@ TuteDude/
 | **Assignment 29** | Q&A Chatbot (OpenAI & Ollama) | Closed-Source APIs vs Local Models, Model Switching, CLI & Streamlit UI | [`Assignment 29`](./GenAI-Task(Assignment%2029)-Parth_Dadhaniya) |
 | **Assignment 30** | Chat Groq RAG with Streamlit UI | Ultra-Low Latency Inference, ChromaDB RAG, Document Ingestion, Streamlit Interactive Chat | [`Assignment 30`](./GenAI-Task(Assignment%2030)-Parth_Dadhaniya) |
 | **Assignment 31** | Conversational PDF Q&A Chatbot with History | Multi-Page PDF Ingestion, ChromaDB RAG, Message History & Trimming, Streamlit UI | [`Assignment 31`](./GenAI-Task(Assignment%2031)-Parth_Dadhaniya) |
+| **Assignment 32** | AI Agents using LangChain | Custom Tools & Toolkits, Tool Binding, Tool Calling Flow, ReAct Agent Architecture | [`Assignment 32`](./GenAI-Task(Assignment%2032)-Parth_Dadhaniya) |
 
 
 
