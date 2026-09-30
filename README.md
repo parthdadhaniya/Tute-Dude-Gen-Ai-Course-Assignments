@@ -40,7 +40,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 26)-Parth_Dadhaniya/  # Groq API Chatbot, RAG & FastAPI Serving
 ├── GenAI-Task(Assignment 27)-Parth_Dadhaniya/  # Chatbots with Conversation History (LangChain, Trimming)
 ├── GenAI-Task(Assignment 28)-Parth_Dadhaniya/  # Q&A RAG Chatbot with Message History (Grounding, Follow-ups)
-└── GenAI-Task(Assignment 29)-Parth_Dadhaniya/  # Q&A Chatbot Application (OpenAI & Ollama Switching)
+├── GenAI-Task(Assignment 29)-Parth_Dadhaniya/  # Q&A Chatbot Application (OpenAI & Ollama Switching)
+└── GenAI-Task(Assignment 30)-Parth_Dadhaniya/  # Chat Groq RAG Application with Streamlit UI
 ```
 
 ---
@@ -78,6 +79,7 @@ TuteDude/
 | **Assignment 27** | Chatbots with Conversation History | Stateful Chatbots, MessagesPlaceholder, History Trimming, Multi-Session Memory | [`Assignment 27`](./GenAI-Task(Assignment%2027)-Parth_Dadhaniya) |
 | **Assignment 28** | Q&A RAG Chatbot with History | Conversational RAG, Document Ingestion, ChromaDB, Contextual Follow-ups | [`Assignment 28`](./GenAI-Task(Assignment%2028)-Parth_Dadhaniya) |
 | **Assignment 29** | Q&A Chatbot (OpenAI & Ollama) | Closed-Source APIs vs Local Models, Model Switching, CLI & Streamlit UI | [`Assignment 29`](./GenAI-Task(Assignment%2029)-Parth_Dadhaniya) |
+| **Assignment 30** | Chat Groq RAG with Streamlit UI | Ultra-Low Latency Inference, ChromaDB RAG, Document Ingestion, Streamlit Interactive Chat | [`Assignment 30`](./GenAI-Task(Assignment%2030)-Parth_Dadhaniya) |
 
 
 

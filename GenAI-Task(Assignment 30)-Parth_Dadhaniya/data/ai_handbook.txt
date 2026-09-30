@@ -1,0 +1,37 @@
+ACME CORP - AI SYSTEMS ENGINEERING MANUAL
+
+Section 1: Groq LPU Hardware Architecture
+Groq has developed the Language Processing Unit (LPU), an entirely new processor category
+designed specifically for sequential, real-time AI inference. Unlike traditional GPUs that
+rely on High Bandwidth Memory (HBM) and dynamic instruction scheduling, Groq uses an
+instruction-driven Tensor Streaming Processor (TSP) with deterministic compilation.
+Groq LPUs deliver blazing inference speeds exceeding 300 to 500 tokens per second for models
+like Llama 3. By storing model weights and activations in fast on-chip SRAM, Groq eliminates
+the memory bandwidth bottleneck that typically throttles GPUs during token generation.
+
+Section 2: Vector Embeddings & Similarity Search
+To enable semantic search, document chunks are converted into dense numerical vectors.
+Our production system utilizes 384-dimensional embeddings (sentence-transformers/all-MiniLM-L6-v2)
+or 1536-dimensional embeddings. These vectors capture latent semantic relationships, allowing
+queries to match conceptually similar passages even when exact keywords differ.
+Vector embeddings are indexed using ChromaDB or FAISS using Cosine Similarity or Hierarchical
+Navigable Small World (HNSW) graphs to achieve sub-millisecond retrieval latencies.
+
+Section 3: Retrieval-Augmented Generation (RAG) Architecture
+Our RAG pipeline operates in five discrete stages:
+1. Ingestion: Documents (PDF, Text, Markdown) are loaded and split into 300-character chunks with a 50-character overlap.
+2. Embedding & Storage: Chunks are converted into vector representations and stored in a vector index.
+3. Retrieval: A top-k retriever extracts the 2 most semantically relevant document chunks for each query.
+4. Prompt Augmentation: The retrieved passages are formatted as context within a strict ChatPromptTemplate.
+5. Generation: The prompt is dispatched to ChatGroq, which synthesizes a grounded answer with source citations.
+
+Section 4: Context Window & Latency Optimization
+To maintain real-time responsiveness, document chunks must be tightly bounded to minimize prompt token overhead.
+In conversational applications, sliding-window trimming retains the most recent 2 to 4 interaction turns.
+This avoids token overflow, prevents the 'lost-in-the-middle' attention degradation, and ensures that
+Time-To-First-Token (TTFT) stays under 100 milliseconds when served through Groq's high-throughput API.
+
+Section 5: Security & Guardrails
+All retrieved contexts are treated as untrusted inputs. The system prompt explicitly instructs ChatGroq:
+'Answer only based on the provided context. If the answer cannot be found in the context, say I don't know.'
+This prevents hallucinations and protects against indirect prompt injection attacks embedded in external documents.
