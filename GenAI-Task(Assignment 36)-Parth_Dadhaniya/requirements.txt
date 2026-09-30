@@ -1,0 +1,5 @@
+langchain>=1.4.0
+langchain-core>=1.6.0
+langchain-huggingface>=1.2.0
+huggingface-hub>=1.33.0
+python-dotenv>=1.0.0
