@@ -38,7 +38,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 24)-Parth_Dadhaniya/  # Ollama Chatbot & LangSmith Tracking
 ├── GenAI-Task(Assignment 25)-Parth_Dadhaniya/  # Prompting & LangChain Chains (LCEL, Pydantic, RAG)
 ├── GenAI-Task(Assignment 26)-Parth_Dadhaniya/  # Groq API Chatbot, RAG & FastAPI Serving
-└── GenAI-Task(Assignment 27)-Parth_Dadhaniya/  # Chatbots with Conversation History (LangChain, Trimming)
+├── GenAI-Task(Assignment 27)-Parth_Dadhaniya/  # Chatbots with Conversation History (LangChain, Trimming)
+└── GenAI-Task(Assignment 28)-Parth_Dadhaniya/  # Q&A RAG Chatbot with Message History (Grounding, Follow-ups)
 ```
 
 ---
@@ -74,6 +75,7 @@ TuteDude/
 | **Assignment 25** | Prompting & LangChain Chains | Prompt Templates, Pydantic Structured Output, Conditional/Parallel Chains, LCEL RAG Pipeline | [`Assignment 25`](./GenAI-Task(Assignment%2025)-Parth_Dadhaniya) |
 | **Assignment 26** | Groq API Chatbot, RAG & FastAPI Serving | Groq LPU Inference, Grounded RAG, FastAPI REST Endpoints, Pydantic Validation | [`Assignment 26`](./GenAI-Task(Assignment%2026)-Parth_Dadhaniya) |
 | **Assignment 27** | Chatbots with Conversation History | Stateful Chatbots, MessagesPlaceholder, History Trimming, Multi-Session Memory | [`Assignment 27`](./GenAI-Task(Assignment%2027)-Parth_Dadhaniya) |
+| **Assignment 28** | Q&A RAG Chatbot with History | Conversational RAG, Document Ingestion, ChromaDB, Contextual Follow-ups | [`Assignment 28`](./GenAI-Task(Assignment%2028)-Parth_Dadhaniya) |
 
 
 

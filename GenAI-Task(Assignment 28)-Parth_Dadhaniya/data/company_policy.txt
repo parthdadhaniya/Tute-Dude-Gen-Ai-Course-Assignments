@@ -1,0 +1,38 @@
+ACME CORP - EMPLOYEE POLICY & OPERATIONAL HANDBOOK
+
+Section 1: Working Hours & Remote Work
+Employees work standard core hours from 9:00 AM to 5:00 PM, Monday through Friday.
+Acme Corp operates on a flexible hybrid work model. Full-time team members are eligible
+to work remotely up to three days per week with manager approval. Remote work requires a
+stable internet connection and adherence to company data privacy standards. All team
+members must be available on communication channels during core collaboration hours (10:00 AM - 4:00 PM).
+
+Section 2: Annual Leave & Time Off Policy
+Full-time employees receive 20 days of paid annual leave per calendar year.
+Leave is accrued on a monthly pro-rata basis (1.66 days per month worked).
+Employees can carry forward a maximum of 5 unused annual leave days into the next calendar year,
+which must be utilized before March 31st of that following year. Any remaining unused leave beyond
+the 5-day limit will lapse without cash compensation. Leave requests longer than 3 consecutive
+business days must be submitted at least two weeks in advance through the HR portal.
+
+Section 3: Sick Leave & Medical Benefits
+All employees are entitled to 10 paid sick leave days per calendar year.
+Sick leave does not carry forward into the subsequent calendar year and cannot be encashed.
+If sick leave exceeds 3 consecutive working days, an official medical certificate signed by
+a registered healthcare practitioner must be uploaded to the HR portal upon returning to work.
+Acme Corp provides comprehensive health insurance coverage for all full-time employees, their
+spouses, and dependent children up to 21 years old.
+
+Section 4: Professional Development & Learning Allowance
+Acme Corp encourages continuous professional growth. Every employee is allocated an annual
+learning budget of $1,500 for certifications, technical courses, industry conferences, and books.
+To utilize this allowance, the employee must submit a course outline and business justification
+to their department head. Pre-approval is required prior to purchasing materials. Approved expenses
+are reimbursed in the subsequent monthly payroll cycle upon submitting valid tax receipts.
+
+Section 5: Hardware & Device Security Policy
+All company-issued laptops (MacBook Pro or Dell XPS) are protected by endpoint encryption and
+remote wipe capability. Employees must never install unapproved third-party software or disable
+antivirus agents. Personal devices accessing company email or repositories must comply with two-factor
+authentication (2FA) and multi-factor authentication (MFA) requirements. Lost or stolen hardware must
+be reported to IT Security within 2 hours of discovery.
