@@ -49,7 +49,8 @@ TuteDude/
 ├── GenAI-Task(Assignment 35)-Parth_Dadhaniya/  # Text-to-Math Agent (ReAct Solver, Calculator Tool, Session State)
 ├── GenAI-Task(Assignment 36)-Parth_Dadhaniya/  # HuggingFace Integration with LangChain (Direct API, LCEL, ChatPromptTemplate)
 ├── GenAI-Task(Assignment 37)-Parth_Dadhaniya/  # AstraDB RAG (Cloud Vector Database, PDF Ingestion, Grounding, Streamlit UI)
-└── GenAI-Task(Assignment 38)-Parth_Dadhaniya/  # CodeLlama with Ollama (Developer Coding Assistant, Prompt Engineering, Streamlit)
+├── GenAI-Task(Assignment 38)-Parth_Dadhaniya/  # CodeLlama with Ollama (Developer Coding Assistant, Prompt Engineering, Streamlit)
+└── GenAI-Task(Assignment 39)-Parth_Dadhaniya/  # GenAI App Deployment (Streamlit Cloud, Hugging Face Spaces, CI/CD, YAML Config)
 ```
 
 ---
@@ -96,6 +97,7 @@ TuteDude/
 | **Assignment 36** | HuggingFace Integration with LangChain | Open-Source Models, Direct Inference, LangChain Endpoint Wrappers, ChatPromptTemplate vs Normal Prompt | [`Assignment 36`](./GenAI-Task(Assignment%2036)-Parth_Dadhaniya) |
 | **Assignment 37** | AstraDB Cloud Vector Database & RAG | DataStax AstraDB, PDF Chunking & Embeddings, Grounded Q&A, Session State | [`Assignment 37`](./GenAI-Task(Assignment%2037)-Parth_Dadhaniya) |
 | **Assignment 38** | CodeLlama Developer Assistant (Ollama) | Code Generation, Code Explanation, Bug Fixing, Code Optimization, Streamlit UI | [`Assignment 38`](./GenAI-Task(Assignment%2038)-Parth_Dadhaniya) |
+| **Assignment 39** | GenAI App Deployment | Streamlit Community Cloud, Hugging Face Spaces, YAML Config, CI/CD, Platform Comparison | [`Assignment 39`](./GenAI-Task(Assignment%2039)-Parth_Dadhaniya) |
 
 
 
