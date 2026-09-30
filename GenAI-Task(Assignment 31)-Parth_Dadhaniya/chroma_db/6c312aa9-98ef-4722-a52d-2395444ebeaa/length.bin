@@ -1,0 +1,2 @@
+invalid type: string "Company AI Knowledge Base - Page 2\nSection 2: Chunking and Embedding Considerations\nWhen splitting large PDF documents, retaining page numbers and headings in\nmetadata is critical for accurate source citations.\nRecursive splitting ensures that paragraphs and sentences remain intact rather", expected f64ooleanALTER TABLE segment_metadata ADD COLUMN bool_value INTEGER;
+ÿÿÿÿ
