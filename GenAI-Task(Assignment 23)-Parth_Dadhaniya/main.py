@@ -33,7 +33,7 @@ def main():
         print("=" * 65, flush=True)
         
         script_path = os.path.join(current_dir, script)
-        result = subprocess.run([sys.executable, "-u", script_path], capture_output=False)
+        result = subprocess.run([sys.executable, "-u", script_path], cwd=current_dir, capture_output=False)
         if result.returncode != 0:
             print(f"Error occurred while executing {script} (code {result.returncode})", flush=True)
             sys.exit(result.returncode)

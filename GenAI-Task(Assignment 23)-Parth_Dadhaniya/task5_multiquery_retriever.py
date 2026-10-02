@@ -28,13 +28,9 @@ embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-
 db = Chroma.from_documents(chunks, embeddings)
 base_retriever = db.as_retriever(search_kwargs={"k": 2})
 
-# if openai key is present use ChatOpenAI, otherwise use FakeListLLM
-api_key = os.getenv("OPENAI_API_KEY")
-if api_key and api_key.startswith("sk-"):
-    from langchain_openai import ChatOpenAI
-    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
-else:
-    # student mock variations
+# initialize LLM using config helper (OpenAI -> Groq -> FakeListLLM)
+llm = config.get_llm()
+if llm is None:
     llm = FakeListLLM(responses=[
         "1. What are vector databases and embeddings in RAG?\n"
         "2. How do vector stores improve retrieval in language models?\n"

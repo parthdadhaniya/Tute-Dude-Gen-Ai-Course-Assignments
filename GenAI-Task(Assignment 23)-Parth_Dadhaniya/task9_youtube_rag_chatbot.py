@@ -18,13 +18,30 @@ class YouTubeChatbot:
         self.retriever = self.db.as_retriever(search_kwargs={"k": 2})
         self.chat_history = []
         
-        # use OpenAI model if key exists, otherwise fallback
-        self.api_key = os.getenv("OPENAI_API_KEY")
-        if self.api_key and self.api_key.startswith("sk-"):
-            from langchain_openai import ChatOpenAI
-            self.llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.1)
+        # get working LLM via config (OpenAI -> Groq -> fallback)
+        self.llm = config.get_llm(temperature=0.1)
+
+    def _fallback_answer(self, question: str, docs):
+        """Direct student fallback logic based on video transcript content."""
+        q_lower = question.lower()
+        if any(w in q_lower for w in ["pasta", "recipe", "cook", "france", "mars"]):
+            return "I cannot find the answer to that in the video."
+        elif "two files" in q_lower or "what is an llm" in q_lower:
+            return "According to the video, an LLM consists of two files: a parameters file with neural network weights (140 GB for Llama-2 70B) and a small run script in C or Python."
+        elif "size" in q_lower or "llama 2 70b" in q_lower or "parameters file" in q_lower:
+            return "In the video, Karpathy states the parameters file for Llama 2 70B is about 140 gigabytes (70 billion 2-byte weights)."
+        elif "pre-training" in q_lower and "fine-tuning" in q_lower:
+            return "Pre-training trains the base model on internet text to predict words. Fine-tuning uses prompt-answer pairs to make it a helpful assistant."
+        elif "pre-training" in q_lower:
+            return "Pre-training trains the model on roughly 10 TB of text (2 trillion tokens) using thousands of GPUs over several months."
+        elif "context window" in q_lower:
+            return "The context window is the working memory of the model (4k to 128k tokens). Text outside this window cannot be accessed."
+        elif "system 1" in q_lower or "system 2" in q_lower:
+            return "LLMs currently operate like System 1 (fast token generation). System 2 thinking represents future deliberate tree-search reasoning."
+        elif "prompt injection" in q_lower or "security" in q_lower:
+            return "The primary security vulnerability is prompt injection, where attackers hide adversarial instructions in data the model reads."
         else:
-            self.llm = None
+            return f"Based on the video: {docs[0].page_content[:120]}..."
 
     def ask(self, question: str):
         # 1. retrieve relevant chunks
@@ -33,36 +50,20 @@ class YouTubeChatbot:
         
         # 2. answer question
         if self.llm:
-            from langchain_core.messages import SystemMessage, HumanMessage
-            system_msg = (
-                "You are an assistant answering questions about a YouTube video.\n"
-                "Answer using ONLY the provided context.\n"
-                "If the answer is not in the context, say 'I cannot find the answer to that in the video.'"
-            )
-            user_msg = f"Context:\n{context}\n\nQuestion: {question}"
-            res = self.llm.invoke([SystemMessage(content=system_msg), HumanMessage(content=user_msg)])
-            answer = res.content.strip()
+            try:
+                from langchain_core.messages import SystemMessage, HumanMessage
+                system_msg = (
+                    "You are an assistant answering questions about a YouTube video.\n"
+                    "Answer using ONLY the provided context concisely in 1-2 sentences.\n"
+                    "If the answer is not in the context, say 'I cannot find the answer to that in the video.'"
+                )
+                user_msg = f"Context:\n{context}\n\nQuestion: {question}"
+                res = self.llm.invoke([SystemMessage(content=system_msg), HumanMessage(content=user_msg)])
+                answer = res.content.strip()
+            except Exception:
+                answer = self._fallback_answer(question, docs)
         else:
-            # direct student fallback logic based on video transcript content
-            q_lower = question.lower()
-            if any(w in q_lower for w in ["pasta", "recipe", "cook", "france", "mars"]):
-                answer = "I cannot find the answer to that in the video."
-            elif "two files" in q_lower or "what is an llm" in q_lower:
-                answer = "According to the video, an LLM consists of two files: a parameters file with neural network weights (140 GB for Llama-2 70B) and a small run script in C or Python."
-            elif "size" in q_lower or "llama 2 70b" in q_lower or "parameters file" in q_lower:
-                answer = "In the video, Karpathy states the parameters file for Llama 2 70B is about 140 gigabytes (70 billion 2-byte weights)."
-            elif "pre-training" in q_lower and "fine-tuning" in q_lower:
-                answer = "Pre-training trains the base model on internet text to predict words. Fine-tuning uses prompt-answer pairs to make it a helpful assistant."
-            elif "pre-training" in q_lower:
-                answer = "Pre-training trains the model on roughly 10 TB of text (2 trillion tokens) using thousands of GPUs over several months."
-            elif "context window" in q_lower:
-                answer = "The context window is the working memory of the model (4k to 128k tokens). Text outside this window cannot be accessed."
-            elif "system 1" in q_lower or "system 2" in q_lower:
-                answer = "LLMs currently operate like System 1 (fast token generation). System 2 thinking represents future deliberate tree-search reasoning."
-            elif "prompt injection" in q_lower or "security" in q_lower:
-                answer = "The primary security vulnerability is prompt injection, where attackers hide adversarial instructions in data the model reads."
-            else:
-                answer = f"Based on the video: {docs[0].page_content[:120]}..."
+            answer = self._fallback_answer(question, docs)
 
         # 3. record in chat history
         self.chat_history.append((question, answer))
