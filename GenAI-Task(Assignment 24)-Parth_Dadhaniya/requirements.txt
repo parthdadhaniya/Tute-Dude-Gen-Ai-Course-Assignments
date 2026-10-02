@@ -1,6 +1,10 @@
+# Requirements for Assignment 24: LangSmith Tracing & Evaluation
+# Parth Dadhaniya
+
 langchain>=0.2.0
-langchain-community>=0.2.0
 langchain-core>=0.2.0
+langchain-community>=0.2.0
 langsmith>=0.1.0
 streamlit>=1.30.0
 requests>=2.28.0
+python-dotenv>=1.0.0

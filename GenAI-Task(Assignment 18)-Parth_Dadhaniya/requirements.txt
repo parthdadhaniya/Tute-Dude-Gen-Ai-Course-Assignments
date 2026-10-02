@@ -1,0 +1,6 @@
+# Requirements for Assignment 18: Text Vectorization (BoW & TF-IDF)
+# Parth Dadhaniya
+
+scikit-learn>=1.3.0
+pandas>=2.0.0
+numpy>=1.24.0

@@ -1,0 +1,4 @@
+# Requirements for Assignment 5: Python Modules & Packages
+# Parth Dadhaniya
+# Note: Uses Python Standard Library (built-in modules only)
+# Recommended Python version: >= 3.8

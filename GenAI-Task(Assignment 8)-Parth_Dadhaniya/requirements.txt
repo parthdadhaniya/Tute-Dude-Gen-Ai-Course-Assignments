@@ -1,0 +1,4 @@
+# Requirements for Assignment 8: Streamlit Web Applications
+# Parth Dadhaniya
+
+streamlit>=1.28.0

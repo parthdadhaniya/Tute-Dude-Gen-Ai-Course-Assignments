@@ -1,0 +1,66 @@
+# =====================================================================
+# Master Requirements - TuteDude Generative AI Course Assignments
+# Author: Parth Dadhaniya
+# Repository: Tute-Dude-Gen-Ai-Course-Assignments (Assignments 1 to 39)
+# =====================================================================
+
+# --- Core LangChain Framework ---
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+langsmith>=0.1.0
+
+# --- LLM Providers & Integrations ---
+openai>=1.30.0
+langchain-openai>=0.1.0
+groq>=0.11.0
+langchain-groq>=0.1.0
+huggingface-hub>=0.20.0
+langchain-huggingface>=0.1.0
+transformers>=4.38.0
+torch>=2.1.0
+ollama>=0.2.0
+langchain-ollama>=0.1.0
+
+# --- Vector Databases & Retrievers ---
+chromadb>=0.5.0
+langchain-chroma>=0.1.0
+sentence-transformers>=3.0.0
+astrapy>=1.4.0
+langchain-astradb>=0.3.0
+
+# --- Web & API Frameworks ---
+streamlit>=1.30.0
+fastapi>=0.110.0
+uvicorn>=0.28.0
+requests>=2.30.0
+
+# --- Document Loaders & Parsers ---
+pypdf>=5.0.0
+beautifulsoup4>=4.12.0
+wikipedia>=1.4.0
+youtube-transcript-api>=0.6.0
+reportlab>=4.0.0
+
+# --- Database & SQL ---
+sqlalchemy>=2.0.0
+pymysql>=1.1.0
+
+# --- Data Science, ML & Visualization ---
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+openpyxl>=3.1.0
+
+# --- NLP & Word Embeddings ---
+nltk>=3.8.0
+gensim>=4.3.0
+
+# --- Utilities & Configuration ---
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+tiktoken>=0.7.0

@@ -1,5 +1,11 @@
-langchain>=1.4.0
-langchain-core>=1.6.0
-langchain-huggingface>=1.2.0
-huggingface-hub>=1.33.0
+# Requirements for Assignment 36: HuggingFace Model Integration
+# Parth Dadhaniya
+
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-huggingface>=0.1.0
+huggingface-hub>=0.20.0
+transformers>=4.38.0
+torch>=2.1.0
 python-dotenv>=1.0.0

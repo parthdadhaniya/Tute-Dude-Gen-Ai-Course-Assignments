@@ -1,8 +1,11 @@
-langchain>=1.4.0
-langchain-core>=1.6.0
-langchain-community>=0.4.0
-langchain-text-splitters>=1.1.0
-langchain-groq>=1.1.0
+# Requirements for Assignment 30: Multi-Document RAG Agent
+# Parth Dadhaniya
+
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+langchain-groq>=0.1.0
 sentence-transformers>=3.0.0
 chromadb>=0.5.0
 pypdf>=5.0.0

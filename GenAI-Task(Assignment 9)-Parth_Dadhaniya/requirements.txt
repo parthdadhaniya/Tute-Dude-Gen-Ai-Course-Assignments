@@ -1,0 +1,4 @@
+# Requirements for Assignment 9: NumPy Mathematical Operations
+# Parth Dadhaniya
+
+numpy>=1.24.0

@@ -1,7 +1,14 @@
+# Requirements for Assignment 25: Self-Querying Retriever & Metadata Filtering
+# Parth Dadhaniya
+
 langchain>=0.2.0
-langchain-community>=0.2.0
 langchain-core>=0.2.0
+langchain-community>=0.2.0
+langchain-text-splitters>=0.2.0
+langchain-openai>=0.1.0
+langchain-groq>=0.1.0
 pydantic>=2.0.0
 chromadb>=0.4.0
 sentence-transformers>=2.2.0
 pypdf>=3.0.0
+python-dotenv>=1.0.0

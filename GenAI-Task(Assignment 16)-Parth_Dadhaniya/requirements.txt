@@ -1,0 +1,5 @@
+# Requirements for Assignment 16: NLP Text Preprocessing Pipeline
+# Parth Dadhaniya
+
+nltk>=3.8.0
+pandas>=2.0.0
