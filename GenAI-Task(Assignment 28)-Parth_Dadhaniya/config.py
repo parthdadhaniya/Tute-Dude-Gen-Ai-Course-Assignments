@@ -84,7 +84,7 @@ def get_chat_model():
     if GROQ_API_KEY:
         try:
             from langchain_groq import ChatGroq
-            return ChatGroq(model_name="llama-3.1-8b-instant", groq_api_key=GROQ_API_KEY)
+            return ChatGroq(model_name="openai/gpt-oss-120b", groq_api_key=GROQ_API_KEY)
         except Exception:
             pass
     return LocalRAGFallbackModel()

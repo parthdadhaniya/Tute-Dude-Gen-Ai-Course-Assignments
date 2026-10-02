@@ -47,7 +47,7 @@ def get_llm():
     groq_key = os.getenv("GROQ_API_KEY", "").strip()
     if groq_key:
         from langchain_groq import ChatGroq
-        return ChatGroq(model_name="llama-3.1-8b-instant", groq_api_key=groq_key, temperature=0.1)
+        return ChatGroq(model_name="qwen/qwen3.8-27b", groq_api_key=groq_key, temperature=0.1)
 
     openai_key = os.getenv("OPENAI_API_KEY", "").strip()
     if openai_key:

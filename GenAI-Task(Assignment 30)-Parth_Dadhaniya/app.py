@@ -23,7 +23,7 @@ with st.sidebar:
 
     model_name = st.selectbox(
         "Choose Groq Model",
-        ["llama-3.1-8b-instant", "llama-3.3-70b-versatile", "mixtral-8x7b-32768"],
+        ["qwen/qwen3.8-27b", "openai/gpt-oss-20b", "openai/gpt-oss-120b", "llama-3.1-8b-instant"],
         index=0
     )
 
@@ -34,31 +34,46 @@ with st.sidebar:
     if st.button("Index Uploaded File", use_container_width=True):
         if uploaded_file is not None:
             with st.spinner("Processing document into ChromaDB..."):
-                ext = ".pdf" if uploaded_file.name.endswith(".pdf") else ".txt"
-                with tempfile.NamedTemporaryFile(delete=False, suffix=ext) as tmp:
-                    tmp.write(uploaded_file.getvalue())
-                    tmp_path = tmp.name
+                ext = ".pdf" if uploaded_file.name.lower().endswith(".pdf") else ".txt"
+                temp_dir = tempfile.gettempdir()
+                tmp_path = os.path.join(temp_dir, f"rag_{uploaded_file.name}")
 
                 try:
+                    with open(tmp_path, "wb") as f:
+                        f.write(uploaded_file.getvalue())
+
                     if ext == ".pdf":
                         loader = PyPDFLoader(tmp_path)
                     else:
                         loader = TextLoader(tmp_path, encoding="utf-8")
+                    
                     raw_docs = loader.load()
-                    for d in raw_docs:
-                        d.metadata["source"] = uploaded_file.name
+                    if not raw_docs:
+                        st.warning("The uploaded file does not contain readable text.")
+                    else:
+                        for d in raw_docs:
+                            d.metadata["source"] = uploaded_file.name
 
-                    splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=50)
-                    chunks = splitter.split_documents(raw_docs)
-                    embeddings = get_embeddings()
-                    st.session_state["vectorstore"] = Chroma.from_documents(chunks, embeddings)
-                    st.session_state["doc_name"] = uploaded_file.name
-                    st.session_state["messages"] = []
-                    st.session_state["chat_history"] = []
-                    st.success(f"Indexed {len(chunks)} chunks from {uploaded_file.name}!")
+                        splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=50)
+                        chunks = splitter.split_documents(raw_docs)
+
+                        if not chunks:
+                            st.warning("Could not extract text chunks from the document.")
+                        else:
+                            embeddings = get_embeddings()
+                            st.session_state["vectorstore"] = Chroma.from_documents(chunks, embeddings)
+                            st.session_state["doc_name"] = uploaded_file.name
+                            st.session_state["messages"] = []
+                            st.session_state["chat_history"] = []
+                            st.success(f"Indexed {len(chunks)} chunks from {uploaded_file.name}!")
+                except Exception as e:
+                    st.error(f"Error processing file: {e}")
                 finally:
                     if os.path.exists(tmp_path):
-                        os.remove(tmp_path)
+                        try:
+                            os.remove(tmp_path)
+                        except Exception:
+                            pass
         else:
             st.warning("Please upload a file first.")
 
@@ -112,38 +127,45 @@ if user_question:
     # Retrieval and answer generation
     with st.chat_message("assistant"):
         with st.spinner("Searching document and querying Groq..."):
-            retriever = st.session_state["vectorstore"].as_retriever(search_kwargs={"k": 2})
-            retrieved_docs = retriever.invoke(user_question)
-            context = "\n\n".join([d.page_content.strip() for d in retrieved_docs])
+            vs = st.session_state.get("vectorstore")
+            if vs is None:
+                st.warning("No document indexed yet. Please upload a document or click 'Reset to Default Handbook'.")
+            else:
+                try:
+                    retriever = vs.as_retriever(search_kwargs={"k": 2})
+                    retrieved_docs = retriever.invoke(user_question)
+                    context = "\n\n".join([d.page_content.strip() for d in retrieved_docs])
 
-            llm = get_chat_model(model_name=model_name)
-            prompt = get_rag_prompt()
-            chain = prompt | llm
+                    llm = get_chat_model(model_name=model_name)
+                    prompt = get_rag_prompt()
+                    chain = prompt | llm
 
-            response = chain.invoke({
-                "context": context,
-                "chat_history": st.session_state["chat_history"],
-                "question": user_question
-            })
-            answer = response.content
+                    response = chain.invoke({
+                        "context": context,
+                        "chat_history": st.session_state["chat_history"],
+                        "question": user_question
+                    })
+                    answer = response.content
 
-            sources = [
-                {"source": os.path.basename(d.metadata.get("source", "doc")), "text": d.page_content.strip()}
-                for d in retrieved_docs
-            ]
+                    sources = [
+                        {"source": os.path.basename(d.metadata.get("source", "doc")), "text": d.page_content.strip()}
+                        for d in retrieved_docs
+                    ]
 
-            st.write(answer)
-            if sources:
-                with st.expander(f"📚 Retrieved Sources ({len(sources)} chunks)"):
-                    for i, src in enumerate(sources, 1):
-                        st.caption(f"**Chunk {i}** | Source: `{src['source']}`")
-                        st.text(src["text"])
+                    st.write(answer)
+                    if sources:
+                        with st.expander(f"📚 Retrieved Sources ({len(sources)} chunks)"):
+                            for i, src in enumerate(sources, 1):
+                                st.caption(f"**Chunk {i}** | Source: `{src['source']}`")
+                                st.text(src["text"])
 
-            # Save state
-            st.session_state["chat_history"].append(HumanMessage(content=user_question))
-            st.session_state["chat_history"].append(AIMessage(content=answer))
-            st.session_state["messages"].append({
-                "role": "assistant",
-                "content": answer,
-                "sources": sources
-            })
+                    # Save state
+                    st.session_state["chat_history"].append(HumanMessage(content=user_question))
+                    st.session_state["chat_history"].append(AIMessage(content=answer))
+                    st.session_state["messages"].append({
+                        "role": "assistant",
+                        "content": answer,
+                        "sources": sources
+                    })
+                except Exception as e:
+                    st.error(f"Error generating answer: {e}")

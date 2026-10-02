@@ -66,7 +66,7 @@ def run_genai_pipeline(task_type: str, user_input: str, api_key: str = "") -> st
     if active_key:
         try:
             from langchain_groq import ChatGroq
-            llm = ChatGroq(model_name="llama-3.1-8b-instant", groq_api_key=active_key, temperature=0.3)
+            llm = ChatGroq(model_name="qwen/qwen3.8-27b", groq_api_key=active_key, temperature=0.3)
             prompt = f"Perform the following {task_type} task clearly and concisely:\n\nInput:\n{user_input}\n\nResponse:"
             res = llm.invoke(prompt)
             return res.content.strip()

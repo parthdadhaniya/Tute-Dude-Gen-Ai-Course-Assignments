@@ -1,7 +1,7 @@
 # Requirements for Assignment 19: Word2Vec Word Embeddings
 # Parth Dadhaniya
 
-gensim>=4.3.0
+gensim==4.4.0
 scikit-learn>=1.3.0
 matplotlib>=3.7.0
 pandas>=2.0.0

@@ -13,7 +13,7 @@ def get_llm():
     if groq_key:
         try:
             from langchain_groq import ChatGroq
-            return ChatGroq(model_name="llama-3.1-8b-instant", groq_api_key=groq_key, temperature=0.0)
+            return ChatGroq(model_name="qwen/qwen3.8-27b", groq_api_key=groq_key, temperature=0.0)
         except Exception:
             pass
 

@@ -32,5 +32,5 @@ def get_llm():
     api_key = os.getenv("GROQ_API_KEY", "").strip() or GROQ_API_KEY.strip()
     if api_key:
         from langchain_groq import ChatGroq
-        return ChatGroq(model_name="llama-3.1-8b-instant", groq_api_key=api_key, temperature=0.2)
+        return ChatGroq(model_name="qwen/qwen3.8-27b", groq_api_key=api_key, temperature=0.2)
     return MockLLM()

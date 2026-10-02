@@ -20,6 +20,7 @@ huggingface-hub>=0.20.0
 langchain-huggingface>=0.1.0
 transformers>=4.38.0
 torch>=2.1.0
+torchvision>=0.16.0
 ollama>=0.2.0
 langchain-ollama>=0.1.0
 
@@ -58,7 +59,7 @@ openpyxl>=3.1.0
 
 # --- NLP & Word Embeddings ---
 nltk>=3.8.0
-gensim>=4.3.0
+gensim==4.4.0
 
 # --- Utilities & Configuration ---
 python-dotenv>=1.0.0

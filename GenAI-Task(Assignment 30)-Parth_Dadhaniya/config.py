@@ -9,7 +9,7 @@ from langchain_core.runnables import Runnable
 load_dotenv()
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
-DEFAULT_MODEL = "llama-3.1-8b-instant"
+DEFAULT_MODEL = "openai/gpt-oss-120b"
 
 
 class LocalGroqFallback(Runnable):
